@@ -43,5 +43,6 @@ Output Page Shows Prediction and Probability as below:
 
 # Best Model Selected
 
-Selected Logistic Regression because of Highest test accuracy of 98.60%
-5 fold Cross Validated accuracy on training is also 98.00%
+1. Selected Logistic Regression because of Highest test F1 Score of 98.60%
+2. 5 fold Cross Validated F1 Score on training is also 98.00%
+3. Hence Logistic Regression is best for this data
