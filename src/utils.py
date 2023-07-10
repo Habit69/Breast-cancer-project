@@ -57,6 +57,16 @@ def evaluate_model(xtrain, ytrain, xtest, ytest, models):
         eval_df = pd.DataFrame(eval_dct)
         eval_df = eval_df.sort_values(by='testing_f1',ascending=False)
         return (report,eval_df)
+    
     except Exception as e:
         logging.info('Exception occured in evaluate model utils.py')
+        raise CustomException(e,sys)
+    
+def load_object(file_path):
+    try:
+        logging.info(f'Loading File Object from : {file_path}')
+        with open(file_path,'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.info('Exception Occured in Load Object from utils.py')
         raise CustomException(e,sys)
