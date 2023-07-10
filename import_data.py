@@ -1,6 +1,3 @@
-import os
-import sys
-
 from sklearn.datasets import load_breast_cancer
 import pymongo
 
