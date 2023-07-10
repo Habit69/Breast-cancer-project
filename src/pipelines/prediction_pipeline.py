@@ -17,12 +17,14 @@ class PredictPipeline:
             model_path = os.path.join('artifacts','model.pkl')
 
             preprocessor = load_object(preprocessor_path)
-            model = load_object(model_path)
+            model = load_object(model_path)            
 
             data_scaled = preprocessor.transform(features)
             pred = model.predict(data_scaled)
 
-            return pred
+            prob = model.predict_proba(data_scaled)[:,-1]
+
+            return (pred[0],round(prob[0],6))
         
         except Exception as e:
             logging.info('Exception Occured in Prediction pipeline')
@@ -130,6 +132,7 @@ class CustomData:
             df = pd.DataFrame(custom_data_input_dict)
             logging.info(f'Dataframe gathered : \n{df.to_string()}')
             
+            return df
         except Exception as e:
             logging.info('Exception occured in prediction pipeline')
             raise CustomException(e,sys)
