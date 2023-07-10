@@ -40,3 +40,8 @@ Screenshot 2 (Submit Button):
 
 Output Page Shows Prediction and Probability as below:
 ![Output](./UserInterface/Output.jpg)
+
+# Best Model Selected
+
+Selected Logistic Regression because of Highest test accuracy of 98.60%
+5 fold Cross Validated accuracy on training is also 98.00%
