@@ -33,8 +33,6 @@ Address to run this application : [http://127.0.0.1:5000/](http://127.0.0.1:5000
 # Project UI
 
 Screenshot 1: 
-![UI1](./UserInterface/Screenshot1.jpg)
-
 Screenshot 2 (Submit Button):
 ![UI2](./UserInterface/Screenshot2.jpg)
 
